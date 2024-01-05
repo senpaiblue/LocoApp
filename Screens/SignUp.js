@@ -1,10 +1,12 @@
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import LottieView from 'lottie-react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function SignUp() {
+  const navigation= useNavigation()
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
+    <SafeAreaView className="flex-1 bg-white">
     <ScrollView
       contentContainerStyle={{
         flexGrow: 1, 
@@ -13,8 +15,8 @@ export default function SignUp() {
         paddingHorizontal: 10,
       }}
     >
-        <View style={styles.container}>
-          <Text style={styles.title}>Loco</Text>
+        <View className="flex-1 items-center justify-center">
+          <Text className="text-orange-400 text-center text-6xl font-bold">Loco</Text>
           <LottieView
             source={require("../lottie-animations/Animation - 1704440966123.json")}
             style={{
@@ -24,47 +26,25 @@ export default function SignUp() {
             }}
             loop={true}
           />
-          <View style={{ flexDirection: "column", alignItems: "center" }}>
+          <View className="flex-col items-center">
             <TouchableOpacity
-              style={{
-                backgroundColor: "orange",
-                padding: 20,
-                borderRadius: 32,
-                width: 300,
-              }}
-              
+            className="bg-orange-400 px-16 py-4 rounded-3xl w-[300]"
+              onPress={()=>navigation.navigate("Profile")}
             >
               <Text
-                style={{
-                  textAlign: "center",
-                  fontWeight: "600",
-                  fontSize: 20,
-                  color: "white",
-                }}
+              className="text-center text-white text-xl font-medium"
               >
                 Sign up
               </Text>
             </TouchableOpacity>
-            <View style={{ flexDirection: "row", gap: 16 }}>
+            <View className="flex-row gap-4 pt-4" >
               <Text
-                style={{
-                  textAlign: "center",
-                  fontWeight: "300",
-                  fontSize: 16,
-                  color: "black",
-                  paddingTop: 20,
-                }}
+              className="text-center font-light text-[16px] text-black "
               >
                 Already have an account?
               </Text>
               <Text
-                style={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  fontSize: 16,
-                  color: "black",
-                  paddingTop: 20,
-                }}
+              className="text-center font-bold text-[16px] text-black "
               >
                 Log in
               </Text>
@@ -76,21 +56,3 @@ export default function SignUp() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: "bold",
-    color: "orange",
-    textAlign: "center",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-});
