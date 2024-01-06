@@ -30,7 +30,7 @@ useEffect(() => {
     console.log(JSON.stringify(_image));
     if (!_image.cancelled) {
       setImage(_image.uri);
-      // handleData('profile_picture', _image.uri)
+      handleData('profile_picture', _image.uri)
     }
   }
   return (

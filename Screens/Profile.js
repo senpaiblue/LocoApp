@@ -30,33 +30,41 @@ export default function SignUpScreen() {
   };
 
   const handleCreateUser = async () => {
-    console.log("UserData before sending:", userData);
     const formData = new FormData();
-  
-    formData.append("name", userData.name);
-    formData.append("email", userData.email);
-    formData.append("password", userData.password);
-    formData.append("age", userData.age);
-  
+    formData.append('name', userData.name);
+    formData.append('email', userData.email);
+    formData.append('password', userData.password);
+    formData.append('age', userData.age.toString()); 
+    
     if (userData.profile_picture) {
-      formData.append("profile_picture", {
+      const filename = userData.profile_picture.split('/').pop();
+      const match = /\.(\w+)$/.exec(filename);
+      let type = 'image/jpeg'; // Default to jpeg if we can't get the type from the filename
+      if (match) {
+        type = `image/${match[1]}`;
+      }
+      formData.append('profile_picture', {
         uri: userData.profile_picture,
-        type: "image/png",
-        name: "profile_picture.png",
+        type: type,
+        name: filename,
       });
     }
-
-try {
-  const response = await axios.post(
-    "https://api.apptask.thekaspertech.com/api/users/register",
-    formData
-  );
-  console.log("Response Data:", response.data);
-} catch (err) {
-  console.error("Error occurred:", err.response ? err.response.data : err);
-}
-};
- 
+  
+    try {
+      const res = await axios.post("https://api.apptask.thekaspertech.com/api/users/register", formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+      console.log("res+++", res.data);
+    } catch (error) {
+      console.log("error raised", error);
+      if (error.response) {
+        // Log detailed error information
+        console.log("Response data:", error.response.data);
+      }
+    }
+  };
   function renderModal() {
     return (
       <Modal visible={activeModal} animationType="fade" transparent={true}>
@@ -106,18 +114,6 @@ try {
             {/* <Image source={require('../assets/profile.png')}/> */}
             <View className="flex-col ">
               <Text className="pb-2 text-sm font-bold">Profile Picture</Text>
-              <View className="flex-row gap-4">
-                <TouchableOpacity className="bg-neutral-500 rounded-2xl px-4 py-2">
-                  <Text className="text-sm text-white font-medium">
-                    Take Photo
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity className="bg-neutral-500 rounded-2xl px-4 py-2">
-                  <Text className="text-sm text-white font-medium">
-                    Gallery
-                  </Text>
-                </TouchableOpacity>
-              </View>
             </View>
           </View>
         </View>
