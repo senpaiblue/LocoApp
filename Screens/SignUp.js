@@ -43,11 +43,13 @@ export default function SignUp() {
               >
                 Already have an account?
               </Text>
+              <TouchableOpacity onPress={()=> navigation.navigate("Login")}>
               <Text
               className="text-center font-bold text-[16px] text-black "
               >
                 Log in
               </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

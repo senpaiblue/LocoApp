@@ -2004,6 +2004,11 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
+"@types/geojson@^7946.0.13":
+  version "7946.0.13"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.13.tgz#e6e77ea9ecf36564980a861e24e62a095988775e"
+  integrity sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.6.tgz#7739c232a1fee9b4d3ce8985f314c0c6d33549d7"
@@ -2276,6 +2281,15 @@ at-least-node@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
+
+axios@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.4.tgz#184ee1f63d412caffcf30d2c50982253c3ee86e0"
+  integrity sha512-heJnIs6N4aa1eSthhN9M5ioILu8Wi8vmQW9iHQ9NUvfkJb0lEEDUiIdQNAuBtfUt3FxReaKdpQA5DbmMOqzF/A==
+  dependencies:
+    follow-redirects "^1.15.4"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 babel-core@^7.0.0-bridge.0:
   version "7.0.0-bridge.0"
@@ -3297,10 +3311,27 @@ expo-font@~11.4.0:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-image-loader@~4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/expo-image-loader/-/expo-image-loader-4.4.0.tgz#35909516311aa60fa4bf35aa6eb7624d7f7f788d"
+  integrity sha512-dq88tiRB8aB1U+O/oJI7IY4VU9Nu2iDjEwR8QDfLtD4xWd5lNGoyic5Vh7911E1qNJFqNMSVIVzOD5l1SQ3A6g==
+
+expo-image-picker@^14.5.0:
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/expo-image-picker/-/expo-image-picker-14.5.0.tgz#fdc14c74ad338a6a630f8fc5c81e642d6bea343c"
+  integrity sha512-9icvfQuWMdNKufFqu+FxenKcfybz9ior+XYQCIl/q5+mpHPo2tKq8I30vu2BjsOJ0Cfo7V4vMeN7a9F/3ooUfQ==
+  dependencies:
+    expo-image-loader "~4.4.0"
+
 expo-keep-awake@~12.3.0:
   version "12.3.0"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-12.3.0.tgz#c42449ae19c993274ddc43aafa618792b6aec408"
   integrity sha512-ujiJg1p9EdCOYS05jh5PtUrfiZnK0yyLy+UewzqrjUqIT8eAGMQbkfOn3C3fHE7AKd5AefSMzJnS3lYZcZYHDw==
+
+expo-location@~16.1.0:
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/expo-location/-/expo-location-16.1.0.tgz#251a465790d6622f828fd18f0edb2a73b9664b72"
+  integrity sha512-/jfRyYrXb9vjr8HoYmVHnzEqnw+0jaoRbHsxj6ePPAbevXmvXZqYHFRtfZtQ+q32SB4X6kUAXu28eBcLS+tqaA==
 
 expo-modules-autolinking@1.5.1:
   version "1.5.1"
@@ -3519,6 +3550,11 @@ flow-parser@^0.206.0:
   resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.206.0.tgz#f4f794f8026535278393308e01ea72f31000bfef"
   integrity sha512-HVzoK3r6Vsg+lKvlIZzaWNBVai+FXTX1wdYhz/wVlH13tb/gOdLXmlTqy6odmTBhT5UoWUbq0k8263Qhr9d88w==
 
+follow-redirects@^1.15.4:
+  version "1.15.4"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.4.tgz#cdc7d308bf6493126b17ea2191ea0ccf3e535adf"
+  integrity sha512-Cr4D/5wlrb0z9dgERpUL3LrmPKVDsETIJhaCMeDfuFYcqa5bldGV6wBsAN6X/vxlXQtFBMrXdXxdL8CbDTGniw==
+
 fontfaceobserver@^2.1.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.3.0.tgz#5fb392116e75d5024b7ec8e4f2ce92106d1488c8"
@@ -3536,6 +3572,15 @@ form-data@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.1.tgz#ebd53791b78356a99af9a300d4282c4d5eb9755f"
   integrity sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
+
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
@@ -5578,6 +5623,11 @@ prop-types@*:
     object-assign "^4.1.1"
     react-is "^16.13.1"
 
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
+
 pump@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
@@ -5677,6 +5727,18 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-native-geolocation-service@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-geolocation-service/-/react-native-geolocation-service-5.3.1.tgz#4ce1017789da6fdfcf7576eb6f59435622af4289"
+  integrity sha512-LTXPtPNmrdhx+yeWG47sAaCgQc3nG1z+HLLHlhK/5YfOgfLcAb9HAkhREPjQKPZOUx8pKZMIpdGFUGfJYtimXQ==
+
+react-native-maps@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.9.1.tgz#b7a3968d5463b2232c4fd9df84a1d387232ccf5f"
+  integrity sha512-bYdwvru5L3bwHo9a/tPpMQnI6eRN6BNjMTxjiDbd6t01mUA0+8e7nCSfgHEm9s3Zq7X2xHf6gjgk2bOXj5Z3IQ==
+  dependencies:
+    "@types/geojson" "^7946.0.13"
 
 react-native-safe-area-context@4.6.3:
   version "4.6.3"
