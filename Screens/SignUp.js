@@ -24,6 +24,7 @@ export default function SignUp() {
               height: 400,
               alignSelf: "center",
             }}
+            autoPlay={true}
             loop={true}
           />
           <View className="flex-col items-center">
